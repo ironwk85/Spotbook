@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spotbook</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Spotbook</string>
+    <string name="fb_login_text">Ingresa vía Facebook</string>
+    <string name="app_id">238698949653050</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_bar_color">#6090b6</string>
+
+</resources>
