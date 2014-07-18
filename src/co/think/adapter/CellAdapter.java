@@ -48,7 +48,15 @@ public class CellAdapter extends BaseAdapter{
 		}
 		
 		Cell cell = cells.get(index);
-		imageDownloader.download(cell.getBook(), (ImageView) view.findViewById(R.id.book_image));
+		ImageView image = (ImageView) view.findViewById(R.id.book_image);
+		if (cell.getBook().getCover() == null){
+			image.setTag(cell.getBook());
+			imageDownloader.download(cell.getBook(), image);
+		}
+		else{
+			image.setImageBitmap(cell.getBook().getCover());
+			image.setTag(cell.getBook());
+		}
 		
 		return view;
 	}

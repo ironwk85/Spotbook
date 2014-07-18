@@ -5,14 +5,16 @@ import android.graphics.Bitmap;
 public class Book {
 	private long id;
 	private String title = null;
+	private String author = null;
 	private String resume = null;
 	private String imageUrl = null;
 	private Bitmap cover = null;
 	
 	public Book(){}
 	
-	public Book(long id, String title, String resume, String imageUrl, Bitmap cover){
+	public Book(long id, String title, String author, String resume, String imageUrl, Bitmap cover){
 		this.title = title;
+		this.author = author;
 		this.resume = resume;
 		this.cover = cover;
 		this.imageUrl = imageUrl;
@@ -25,6 +27,14 @@ public class Book {
 	
 	public void setImageUrl(String imageUrl){
 		this.imageUrl = imageUrl;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 	
 	public String getTitle() {
@@ -59,3 +69,4 @@ public class Book {
 		this.id = id;
 	}
 }
+

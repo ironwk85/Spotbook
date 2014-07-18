@@ -269,7 +269,7 @@ public class ImageDownloader {
         @Override
         protected Bitmap doInBackground(Object... params) {
         	book = (Book)params[0];
-            url = (String)(book.getImageUrl());
+            url = book.getImageUrl();
             return downloadBitmap(url);
         }
 
@@ -292,7 +292,6 @@ public class ImageDownloader {
                 if ((this == bitmapDownloaderTask) || (mode != Mode.CORRECT)) {
                     imageView.setImageBitmap(bitmap);
                     book.setCover(bitmap);
-                    imageView.setTag(book);
                 }
             }
         }
